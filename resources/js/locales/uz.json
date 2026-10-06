@@ -1,0 +1,86 @@
+{
+    "brand": {
+        "title": "«Navoiy KMK» AJ LIMS",
+        "sub": "Laboratoriya axborotini boshqarishning yagona tizimi"
+    },
+    "nav": {
+        "admin": "Admin panel",
+        "theme": "Mavzuni almashtirish"
+    },
+    "hero": {
+        "eyebrow": "Kombinat laboratoriyalari",
+        "h1a": "Laboratoriya axborot tizimi",
+        "h1b": "«Navoiy KMK» AJ",
+        "lead": "Kombinatning barcha gidrometallurgiya zavodlari va MITLning LIMSiga yagona kirish. Har bir laboratoriya o‘z serverida ishlaydi; bu sahifa ularni bir joyga to‘playdi.",
+        "decree": "O‘zbekiston Respublikasi Prezidentining PQ-276-son qarori ijrosida amalga oshirilmoqda"
+    },
+    "stats": {
+        "total": "Laboratoriya",
+        "live": "Ishga tushgan",
+        "soon": "Joriy etilmoqda"
+    },
+    "sections": {
+        "labs": "Laboratoriyalar",
+        "next": "Keyingi bosqich"
+    },
+    "card": {
+        "open": "LIMSni ochish",
+        "noaddr": "Manzil ko‘rsatilmagan",
+        "soon": "Tez orada",
+        "live": "Ishlamoqda"
+    },
+    "future": {
+        "h": "Kombinat rahbariyati uchun yig‘ma tahlil",
+        "p": "LIMS barcha maydonchalarda ishga tushirilgandan so‘ng bu yerda NGMKning barcha laboratoriyalari bo‘yicha konsolidatsiyalangan hisobotlar, dashboardlar va tahlillar paydo bo‘ladi — kirish chegaralangan holda: maydoncha o‘z ma’lumotlarini, rahbariyat yig‘ma ma’lumotlarni ko‘radi.",
+        "tag": "Ishlab chiqilmoqda"
+    },
+    "footer": {
+        "org": "«Navoiy kon-metallurgiya kombinati» AJ",
+        "sub": "Laboratoriya axborotini boshqarishning yagona tizimi"
+    },
+    "auth": {
+        "title": "Admin panelga kirish",
+        "sub": "Laboratoriyalar ro‘yxatini boshqarish",
+        "email": "Email",
+        "password": "Parol",
+        "remember": "Meni eslab qol",
+        "submit": "Kirish",
+        "back": "Bosh sahifaga"
+    },
+    "admin": {
+        "title": "Laboratoriyalar",
+        "subtitle": "LIMS ro‘yxati va statuslarini boshqarish",
+        "add": "Laboratoriya qo‘shish",
+        "logout": "Chiqish",
+        "toSite": "Saytga",
+        "empty": "Hozircha laboratoriyalar yo‘q. Birinchisini qo‘shing.",
+        "cols": {
+            "order": "№",
+            "code": "Kod",
+            "name": "Nomi (RU)",
+            "status": "Status",
+            "url": "Manzil",
+            "actions": "Amallar"
+        },
+        "form": {
+            "createTitle": "Yangi laboratoriya",
+            "editTitle": "Laboratoriyani tahrirlash",
+            "code": "Kod",
+            "codeHint": "Masalan: ГМЗ-1, ЦНИЛ",
+            "nameRu": "Nomi (ruscha)",
+            "nameUz": "Nomi (o‘zbekcha)",
+            "nameEn": "Nomi (inglizcha)",
+            "status": "Status",
+            "statusLive": "Ishlamoqda",
+            "statusSoon": "Tez orada",
+            "url": "LIMS manzili (URL)",
+            "urlHint": "http://... — manzil hali noma’lum bo‘lsa, bo‘sh qoldiring",
+            "sort": "Chiqarish tartibi",
+            "save": "Saqlash",
+            "create": "Qo‘shish",
+            "cancel": "Bekor qilish",
+            "delete": "O‘chirish",
+            "deleteConfirm": "Ushbu laboratoriya o‘chirilsinmi?"
+        }
+    }
+}

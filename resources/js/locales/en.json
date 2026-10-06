@@ -1,0 +1,86 @@
+{
+    "brand": {
+        "title": "Navoi MMC JSC — LIMS",
+        "sub": "Unified Laboratory Information Management System"
+    },
+    "nav": {
+        "admin": "Admin panel",
+        "theme": "Toggle theme"
+    },
+    "hero": {
+        "eyebrow": "Combine Laboratories",
+        "h1a": "Laboratory Information System",
+        "h1b": "Navoi MMC JSC",
+        "lead": "Single access point to the LIMS of all hydrometallurgical plants and the Central Research Lab. Each laboratory runs on its own server; this page brings them together.",
+        "decree": "Implemented under Presidential Decree of the Republic of Uzbekistan PP-276"
+    },
+    "stats": {
+        "total": "Laboratories",
+        "live": "Launched",
+        "soon": "Rolling out"
+    },
+    "sections": {
+        "labs": "Laboratories",
+        "next": "Next stage"
+    },
+    "card": {
+        "open": "Open LIMS",
+        "noaddr": "Address not set",
+        "soon": "Soon",
+        "live": "Online"
+    },
+    "future": {
+        "h": "Consolidated analytics for combine management",
+        "p": "Once LIMS is launched at every site, this area will host consolidated reports, dashboards and analytics across all NGMK laboratories — with access control: a site sees its own data, management sees the aggregates.",
+        "tag": "In development"
+    },
+    "footer": {
+        "org": "Navoi Mining and Metallurgical Combine JSC",
+        "sub": "Unified Laboratory Information Management System"
+    },
+    "auth": {
+        "title": "Admin panel login",
+        "sub": "Manage the list of laboratories",
+        "email": "Email",
+        "password": "Password",
+        "remember": "Remember me",
+        "submit": "Sign in",
+        "back": "Back to home"
+    },
+    "admin": {
+        "title": "Laboratories",
+        "subtitle": "Manage the LIMS list and statuses",
+        "add": "Add laboratory",
+        "logout": "Log out",
+        "toSite": "View site",
+        "empty": "No laboratories yet. Add the first one.",
+        "cols": {
+            "order": "#",
+            "code": "Code",
+            "name": "Name (RU)",
+            "status": "Status",
+            "url": "Address",
+            "actions": "Actions"
+        },
+        "form": {
+            "createTitle": "New laboratory",
+            "editTitle": "Edit laboratory",
+            "code": "Code",
+            "codeHint": "e.g. ГМЗ-1, ЦНИЛ",
+            "nameRu": "Name (Russian)",
+            "nameUz": "Name (Uzbek)",
+            "nameEn": "Name (English)",
+            "status": "Status",
+            "statusLive": "Online",
+            "statusSoon": "Soon",
+            "url": "LIMS address (URL)",
+            "urlHint": "http://... — leave empty if the address is not known yet",
+            "sort": "Sort order",
+            "save": "Save",
+            "create": "Create",
+            "cancel": "Cancel",
+            "delete": "Delete",
+            "deleteConfirm": "Delete this laboratory?"
+        }
+    }
+}
