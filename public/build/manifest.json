@@ -1,46 +1,46 @@
 {
-  "_AdminLayout-DNEihfLF.js": {
-    "file": "assets/AdminLayout-DNEihfLF.js",
+  "_AdminLayout-BqDDzsf0.js": {
+    "file": "assets/AdminLayout-BqDDzsf0.js",
     "name": "AdminLayout",
     "imports": [
       "resources/js/app.js",
-      "_AppShell-CP3WduQ_.js"
+      "_AppShell-vRkTngMn.js"
     ]
   },
-  "_AppShell-CP3WduQ_.js": {
-    "file": "assets/AppShell-CP3WduQ_.js",
+  "_AppShell-vRkTngMn.js": {
+    "file": "assets/AppShell-vRkTngMn.js",
     "name": "AppShell",
     "imports": [
       "resources/js/app.js",
-      "_useLang-CkAWZQm-.js"
+      "_useLang-B9falSsk.js"
     ]
   },
-  "_LabForm-CC8BV_H4.js": {
-    "file": "assets/LabForm-CC8BV_H4.js",
+  "_LabForm-DgN1eh85.js": {
+    "file": "assets/LabForm-DgN1eh85.js",
     "name": "LabForm",
     "imports": [
       "resources/js/app.js"
     ]
   },
-  "_useAgo-8iHpd8kn.js": {
-    "file": "assets/useAgo-8iHpd8kn.js",
+  "_useAgo-DU6_Li7t.js": {
+    "file": "assets/useAgo-DU6_Li7t.js",
     "name": "useAgo",
     "imports": [
       "resources/js/app.js"
     ]
   },
-  "_useAutoRefresh-CdscoMN3.js": {
-    "file": "assets/useAutoRefresh-CdscoMN3.js",
+  "_useAutoRefresh-C7FM-bO7.js": {
+    "file": "assets/useAutoRefresh-C7FM-bO7.js",
     "name": "useAutoRefresh",
     "imports": [
-      "_AppShell-CP3WduQ_.js",
+      "_AppShell-vRkTngMn.js",
       "resources/js/app.js",
-      "_useLang-CkAWZQm-.js",
-      "_useAgo-8iHpd8kn.js"
+      "_useLang-B9falSsk.js",
+      "_useAgo-DU6_Li7t.js"
     ]
   },
-  "_useLang-CkAWZQm-.js": {
-    "file": "assets/useLang-CkAWZQm-.js",
+  "_useLang-B9falSsk.js": {
+    "file": "assets/useLang-B9falSsk.js",
     "name": "useLang",
     "imports": [
       "resources/js/app.js"
@@ -52,83 +52,83 @@
     "isEntry": true
   },
   "resources/js/Pages/Admin/Labs/Create.vue": {
-    "file": "assets/Create-Ca1IVNOv.js",
+    "file": "assets/Create-QYvDWVgf.js",
     "name": "Create",
     "src": "resources/js/Pages/Admin/Labs/Create.vue",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.js",
-      "_AdminLayout-DNEihfLF.js",
-      "_LabForm-CC8BV_H4.js",
-      "_AppShell-CP3WduQ_.js",
-      "_useLang-CkAWZQm-.js"
+      "_AdminLayout-BqDDzsf0.js",
+      "_LabForm-DgN1eh85.js",
+      "_AppShell-vRkTngMn.js",
+      "_useLang-B9falSsk.js"
     ]
   },
   "resources/js/Pages/Admin/Labs/Edit.vue": {
-    "file": "assets/Edit-DE-pcNLK.js",
+    "file": "assets/Edit-Dm1-9J-w.js",
     "name": "Edit",
     "src": "resources/js/Pages/Admin/Labs/Edit.vue",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.js",
-      "_AdminLayout-DNEihfLF.js",
-      "_LabForm-CC8BV_H4.js",
-      "_useLang-CkAWZQm-.js",
-      "_useAgo-8iHpd8kn.js",
-      "_AppShell-CP3WduQ_.js"
+      "_AdminLayout-BqDDzsf0.js",
+      "_LabForm-DgN1eh85.js",
+      "_useLang-B9falSsk.js",
+      "_useAgo-DU6_Li7t.js",
+      "_AppShell-vRkTngMn.js"
     ]
   },
   "resources/js/Pages/Admin/Labs/Index.vue": {
-    "file": "assets/Index-ig31fBcM.js",
+    "file": "assets/Index-Dz3bCBTG.js",
     "name": "Index",
     "src": "resources/js/Pages/Admin/Labs/Index.vue",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.js",
-      "_AdminLayout-DNEihfLF.js",
-      "_useLang-CkAWZQm-.js",
-      "_useAgo-8iHpd8kn.js",
-      "_AppShell-CP3WduQ_.js"
+      "_AdminLayout-BqDDzsf0.js",
+      "_useLang-B9falSsk.js",
+      "_useAgo-DU6_Li7t.js",
+      "_AppShell-vRkTngMn.js"
     ]
   },
   "resources/js/Pages/Auth/Login.vue": {
-    "file": "assets/Login-uitYKvz8.js",
+    "file": "assets/Login-wbrfgqbE.js",
     "name": "Login",
     "src": "resources/js/Pages/Auth/Login.vue",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.js",
-      "_useLang-CkAWZQm-.js"
+      "_useLang-B9falSsk.js"
     ]
   },
   "resources/js/Pages/Home.vue": {
-    "file": "assets/Home-l1WTkg5o.js",
+    "file": "assets/Home-BfPwe0KW.js",
     "name": "Home",
     "src": "resources/js/Pages/Home.vue",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.js",
-      "_useAutoRefresh-CdscoMN3.js",
-      "_AppShell-CP3WduQ_.js",
-      "_useLang-CkAWZQm-.js",
-      "_useAgo-8iHpd8kn.js"
+      "_useAutoRefresh-C7FM-bO7.js",
+      "_AppShell-vRkTngMn.js",
+      "_useLang-B9falSsk.js",
+      "_useAgo-DU6_Li7t.js"
     ]
   },
   "resources/js/Pages/Lab.vue": {
-    "file": "assets/Lab-D0aPFjBJ.js",
+    "file": "assets/Lab-4Qc4Xy9G.js",
     "name": "Lab",
     "src": "resources/js/Pages/Lab.vue",
     "isDynamicEntry": true,
     "imports": [
       "resources/js/app.js",
-      "_useAutoRefresh-CdscoMN3.js",
-      "_useLang-CkAWZQm-.js",
-      "_AppShell-CP3WduQ_.js",
-      "_useAgo-8iHpd8kn.js"
+      "_useAutoRefresh-C7FM-bO7.js",
+      "_useLang-B9falSsk.js",
+      "_AppShell-vRkTngMn.js",
+      "_useAgo-DU6_Li7t.js"
     ]
   },
   "resources/js/app.js": {
-    "file": "assets/app-BsWoHPDr.js",
+    "file": "assets/app-B9KZkHNB.js",
     "name": "app",
     "src": "resources/js/app.js",
     "isEntry": true,

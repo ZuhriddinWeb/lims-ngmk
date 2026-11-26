@@ -235,7 +235,9 @@
         "rotate": "Kalitni almashtirish",
         "revoke": "Bekor qilish",
         "rotateConfirm": "Eski kalit darhol ishlamay qoladi. Zavod LIMS'iga yangisini kiritish kerak bo'ladi. Davom etilsinmi?",
-        "revokeConfirm": "Kalit bekor qilinsinmi? Zavod endi ma'lumot yubora olmaydi."
+        "revokeConfirm": "Kalit bekor qilinsinmi? Zavod endi ma'lumot yubora olmaydi.",
+        "broken": "Saqlangan kalitni bu serverda ochib bo'lmadi (baza boshqa serverdan ko'chirilgan yoki APP_KEY boshqa). «Kalit yaratish» ni bosing va yangi kalitni zavod LIMS'iga kiriting.",
+        "brokenShort": "Kalitni qayta yarating"
     },
     "ds": {
         "summary": "Asosiy ko'rsatkichlar",

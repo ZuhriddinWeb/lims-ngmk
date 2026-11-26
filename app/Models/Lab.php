@@ -24,7 +24,7 @@ class Lab extends Model
 
     protected $casts = [
         'sort_order' => 'integer',
-        'ingest_key' => 'encrypted',
+        'ingest_key' => \App\Casts\SafeEncrypted::class, // ochilmasa — null (sahifa yiqilmaydi)
         'key_created_at' => 'datetime',
         'last_seen_at' => 'datetime',
     ];
@@ -57,6 +57,12 @@ class Lab extends Model
     public function hasKey(): bool
     {
         return ! empty($this->ingest_key);
+    }
+
+    /** Bazada kalit bor, lekin bu serverning APP_KEY'i bilan ochilmaydi — qayta yaratish kerak */
+    public function keyBroken(): bool
+    {
+        return ! empty($this->getRawOriginal('ingest_key')) && ! $this->hasKey();
     }
 
     public function keyHint(): ?string

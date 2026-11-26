@@ -147,6 +147,26 @@ class LiveFeedTest extends TestCase
             ->assertInertia(fn (Assert $p) => $p->where('statsVisible', true)->where('labs.0.feed.today.received', 42));
     }
 
+    public function test_key_encrypted_with_other_app_key_does_not_break_pages(): void
+    {
+        $lab = $this->lab();
+        $other = new \Illuminate\Encryption\Encrypter(random_bytes(32), 'AES-256-CBC');
+        \DB::table('labs')->where('id', $lab->id)->update(['ingest_key' => $other->encryptString('ngmk1.' . $lab->id . '.' . str_repeat('a', 48))]);
+
+        $this->get('/')->assertOk()->assertInertia(fn (Assert $p) => $p->where('labs.0.feed.connected', false));
+        $this->get("/labs/{$lab->id}")->assertOk();
+        $this->send($lab, 'ngmk1.' . $lab->id . '.' . str_repeat('a', 48), $this->payload())->assertStatus(401);
+
+        $admin = User::factory()->create();
+        $this->actingAs($admin)->get('/admin/labs')->assertOk()->assertInertia(fn (Assert $p) => $p->where('labs.0.key_broken', true));
+        $this->actingAs($admin)->get("/admin/labs/{$lab->id}/edit")->assertOk()->assertInertia(fn (Assert $p) => $p->where('feed.key_broken', true));
+
+        // qayta yaratilgach — hammasi joyida
+        $key = $lab->fresh()->issueKey();
+        $this->send($lab, $key, $this->payload())->assertOk();
+        $this->assertFalse($lab->fresh()->keyBroken());
+    }
+
     public function test_admin_issues_key_once_and_can_revoke(): void
     {
         $lab = $this->lab();

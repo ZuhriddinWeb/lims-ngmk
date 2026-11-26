@@ -63,6 +63,7 @@ function destroy(lab) {
                         <td>
                             <span v-if="lab.online" class="status online"><span class="sd" />{{ t('state.online') }}</span>
                             <span v-else-if="lab.connected" class="status offline"><span class="sd" />{{ t('state.offline') }}</span>
+                            <span v-else-if="lab.key_broken" class="status offline"><span class="sd" />{{ t('key.brokenShort') }}</span>
                             <span v-else class="status soon"><span class="sd" />{{ t('admin.noKey') }}</span>
                             <div v-if="lab.connected" class="dim" style="margin-top:4px">{{ lab.last_seen ? ago(lab.last_seen) : t('time.never') }} · {{ t('admin.blocksN', { n: lab.datasets.length }) }}</div>
                         </td>

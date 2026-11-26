@@ -1,45 +1,39 @@
 ===========================================================================
- NGMK LIMS PORTALI — v3 dizayn (zavod LIMS'i uslubida)
- 2026-11-26     v2 ustidan yoyiladi (v2 allaqachon o'rnatilgan bo'lishi kerak)
+ NGMK LIMS PORTALI — v3.1 (v3 + «The MAC is invalid» tuzatishi)
+ 2026-11-26   Bu zip v3 ni TO'LIQ o'z ichiga oladi (v3 ni yoymagan bo'lsangiz ham bo'ladi).
 ===========================================================================
 
-NIMA O'ZGARDI
+XATO SABABI
 ---------------------------------------------------------------------------
- • Karkas zavod LIMS'i bilan bir xil: chapda yon panel (Umumiy ko'rinish +
-   har bir laboratoriya, rangli holat nuqtasi bilan; yig'ish mumkin), tepada
-   sahifa yo'li, jonli soat, til menyusi, mavzu, kirish/foydalanuvchi.
-   Kontent butun ekran kengligini egallaydi.
- • Ranglar, shrift (Inter), panellar, tugmalar — LIMS'dagi kabi. Sukut mavzu — yorug'.
- • Umumiy ko'rinish: 6 ta KPI (+ onlayn laboratoriyalar), 30 kunlik dinamika,
-   reyting va uskunalar tayyorligi, barcha laboratoriyalar bo'yicha «Ish oqimi»,
-   laboratoriyalar JADVALI (holat, bugungi sonlar, 30 kun, mediana, uskunalar,
-   dinamika, oxirgi aloqa). Kichik ekranda jadval o'rniga kartalar.
- • Laboratoriya sahifasi — LIMS «Rahbariyat paneli» tuzilishida: KPI, ish oqimi
-   (yoshi bo'yicha), dinamika + smenalar jadvali, guruhlar/bo'limlar, uskunalar,
-   buyurtmalar, ishchi varaqlar.
- • Tuzatildi: sana «M11 26, Thu» → «pay, 26-noyabr»; «+2591%» kabi foizlar —
-   endi o'tgan davr juda kichik bo'lsa «solishtirib bo'lmaydi», 2 baravardan
-   ko'p bo'lsa «×27» ko'rinishida (sichqonchani olib borsa — o'tgan davr soni).
- Bazaga o'zgarish YO'Q (migratsiya yo'q). Yangi paket yo'q.
+ Laboratoriya ulanish kaliti bazada APP_KEY bilan shifrlanadi. Serverdagi bazada
+ kalit BOSHQA APP_KEY bilan shifrlangan (kalit boshqa kompyuterda — masalan lokalda —
+ yaratilgan va baza umumiy/ko'chirilgan, yoki serverda APP_KEY almashgan).
+ Server uni ocholmay, butun sahifani yiqitardi.
 
-1. LOKAL KOMPYUTERDA (lims-ngmk)
+TUZATISH
 ---------------------------------------------------------------------------
-  1) Zip ichidagi fayllarni loyiha ildiziga yoying (ustiga yozish — «Ha»).
-     OQISH.txt ni loyihaga qo'shmang.
-  2) Endi kerak bo'lmagan 2 faylni o'chiring:
+ • Ochilmaydigan kalit endi «kalit yo'q» deb hisoblanadi — sahifalar ishlaydi.
+ • Admin → Laboratoriyalar ro'yxatida «Kalitni qayta yarating», tahrirlash sahifasida
+   tushuntirish chiqadi.
+
+1. LOKAL KOMPYUTERDA
+---------------------------------------------------------------------------
+  1) Zipni loyiha ildiziga yoying (OQISH.txt siz).
+  2) v3 ni hali yoymagan bo'lsangiz:
        git rm resources/js/Components/TopBar.vue resources/js/Components/SiteFooter.vue
   3) npm run build
-  4) php artisan serve → brauzerda Ctrl+F5 bilan tekshiring.
-  5) git add -A
-     git add -f public/build
-     git commit -m "Portal v3: LIMS uslubidagi dizayn"
-     git push
+  4) git add -A ;  git add -f public/build ;  git commit -m "Portal v3.1" ;  git push
 
 2. SERVERDA (192.168.14.23)
 ---------------------------------------------------------------------------
      git pull
      php artisan optimize:clear
-  Brauzerda Ctrl+F5.
+  MUHIM: serverda «php artisan key:generate» ISHLATMANG — .env dagi APP_KEY o'zgarmasin.
 
- Eslatma: Inter shrifti Google Fonts'dan yuklanadi (LIMS'dagi kabi). Internet
- bo'lmagan kompyuterda tizim shrifti (Segoe UI) ishlatiladi — dizayn buzilmaydi.
+3. KALITNI QAYTA YARATISH (bir marta)
+---------------------------------------------------------------------------
+  a) Kalitni FAQAT server portalida yarating: http://192.168.14.23:5000/admin
+     → Laboratoriyalar → ГМЗ-3 (va boshqa ulangan zavodlar) → «Kalit yaratish».
+     (Lokal portalda yaratilgan kalit server uchun yaroqsiz.)
+  b) Yangi kalitni zavod LIMS'iga kiriting: Administratsiya → Markaziy portal →
+     «Yangi kalit kiritish» → Saqlash → «Hozir yuborish».

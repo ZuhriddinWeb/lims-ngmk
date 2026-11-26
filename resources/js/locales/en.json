@@ -235,7 +235,9 @@
         "rotate": "Replace key",
         "revoke": "Revoke",
         "rotateConfirm": "The old key stops working immediately and the plant LIMS will need the new one. Continue?",
-        "revokeConfirm": "Revoke the key? The plant will no longer be able to send data."
+        "revokeConfirm": "Revoke the key? The plant will no longer be able to send data.",
+        "broken": "The stored key cannot be decrypted on this server (database copied from another server or a different APP_KEY). Click “Issue key” and enter the new key in the plant LIMS.",
+        "brokenShort": "Re-issue the key"
     },
     "ds": {
         "summary": "Key figures",

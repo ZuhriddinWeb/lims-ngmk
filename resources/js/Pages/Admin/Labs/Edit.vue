@@ -77,6 +77,8 @@ const state = computed(() => (props.feed.online ? 'online' : props.feed.connecte
                 </div>
                 <p class="sub" style="margin:0 0 14px;line-height:1.5">{{ t('key.hint') }}</p>
 
+                <div v-if="feed.key_broken && !newKey" class="flash error" style="margin-bottom:14px">{{ t('key.broken') }}</div>
+
                 <div v-if="newKey" class="keybox" style="margin-bottom:14px">
                     <strong style="font-size:13px">{{ t('key.newTitle') }}</strong>
                     <div class="sub" style="margin-top:2px">{{ t('key.newHint') }}</div>

@@ -26,6 +26,7 @@ class LabController extends Controller
                 'url' => $lab->url,
                 'sort_order' => $lab->sort_order,
                 'connected' => $lab->hasKey(),
+                'key_broken' => $lab->keyBroken(),
                 'online' => \App\Support\LabFeed::online($lab, $lab->snapshot?->payload ?? []),
                 'last_seen' => $lab->last_seen_at?->toIso8601String(),
                 'datasets' => $lab->snapshot?->payload['datasets'] ?? [],
@@ -65,6 +66,7 @@ class LabController extends Controller
             'feed' => [
                 'connected' => $lab->hasKey(),
                 'key_hint' => $lab->keyHint(),
+                'key_broken' => $lab->keyBroken(),
                 'key_created_at' => $lab->key_created_at?->toIso8601String(),
                 'last_seen' => $lab->last_seen_at?->toIso8601String(),
                 'last_ip' => $lab->last_ip,
