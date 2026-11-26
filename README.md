@@ -128,9 +128,28 @@ Avval seed'dagi qiymatlar: ГМЗ-5 → `http://192.168.26.8:3010`, qolganlari b
 Manzillarni **admin panel** orqali kiriting (yoki `LabSeeder.php` da).
 
 Agar laboratoriya statusi "Ishlamoqda" bo'lsa va manzil ko'rsatilgan bo'lsa —
-public sahifada "LIMSni ochish" tugmasi faol bo'ladi. Shu bilan birga, ag'ar
-portal va zavod serveri bir tarmoqda bo'lsa, kartochkada **jonli holat pulsi**
-yonadi (`useHealthPing` zavod serveridan `/ngmk.png` ni yuklab ko'radi).
+public sahifada "LIMSni ochish" tugmasi faol bo'ladi.
+
+## Zavod LIMS'laridan jonli ma'lumot (v2)
+
+Har bir zavod LIMS'i (Paket 44+) o'zi **POST `/api/ingest`** ga jamlangan
+ko'rsatkichlarni yuboradi (har 5–60 daqiqada, HMAC-SHA256 imzo bilan). Portal
+zavod serverlariga hech qachon o'zi ulanmaydi.
+
+1. Admin → Laboratoriyalar → zavod → **Kalit yaratish** (kalit bir marta ko'rsatiladi).
+2. Kalit zavod LIMS'ida: Administratsiya → Markaziy portal ga kiritiladi.
+3. Qaysi bloklar yuborilishini zavod admini tanlaydi; portal faqat kelganini ko'rsatadi.
+
+Har laboratoriya uchun oxirgi snapshot `lab_snapshots` jadvalida (bitta qator).
+«Onlayn» = oxirgi aloqa `oraliq×2 + 3 daqiqa` ichida. «Bugun» raqamlari faqat
+bugun yaratilgan snapshotdan olinadi.
+
+Sozlamalar (`config/portal.php`, `.env`): `PORTAL_PUBLIC_STATS=false` — raqamlar
+faqat tizimga kirganlarga ko'rinadi.
+
+Namoyish uchun: `php artisan portal:demo` — ulanmagan laboratoriyalarni DEMO
+belgili namunaviy ma'lumot bilan to'ldiradi (haqiqiy ma'lumotni almashtirmaydi);
+`php artisan portal:demo --clear` — demoni o'chiradi.
 
 ---
 
@@ -200,7 +219,7 @@ Public sahifa render bo'lishi, admin himoyasi va CRUD amallari tekshiriladi.
 
 ## Keyingi bosqich (yo'l xaritasi)
 
-- [ ] Sводная аналитика / konsolidatsiyalangan dashboard (rahbariyat uchun)
+- [x] Konsolidatsiyalangan dashboard (zavodlardan jonli ma'lumot, v2)
 - [ ] Rollar va kirish chegaralari (площадка ↔ руководство)
-- [ ] Laboratoriyalar holatini server tomonda monitoring (cron + health log)
+- [x] Laboratoriyalar holatini server tomonda monitoring (push + oxirgi aloqa)
 - [ ] Audit log (kim nimani o'zgartirgani)

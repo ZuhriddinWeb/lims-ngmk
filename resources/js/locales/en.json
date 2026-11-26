@@ -4,20 +4,9 @@
         "sub": "Unified Laboratory Information Management System"
     },
     "nav": {
-        "admin": "Admin panel",
-        "theme": "Toggle theme"
-    },
-    "hero": {
-        "eyebrow": "Combine Laboratories",
-        "h1a": "Laboratory Information System",
-        "h1b": "Navoi MMC JSC",
-        "lead": "Single access point to the LIMS of all hydrometallurgical plants and the Central Research Lab. Each laboratory runs on its own server; this page brings them together.",
-        "decree": "Implemented under Presidential Decree of the Republic of Uzbekistan PP-276"
-    },
-    "stats": {
-        "total": "Laboratories",
-        "live": "Launched",
-        "soon": "Rolling out"
+        "admin": "Admin",
+        "theme": "Toggle theme",
+        "live": "Live mode: data refreshes automatically"
     },
     "sections": {
         "labs": "Laboratories",
@@ -27,16 +16,25 @@
         "open": "Open LIMS",
         "noaddr": "Address not set",
         "soon": "Soon",
-        "live": "Online"
-    },
-    "future": {
-        "h": "Consolidated analytics for combine management",
-        "p": "Once LIMS is launched at every site, this area will host consolidated reports, dashboards and analytics across all NGMK laboratories — with access control: a site sees its own data, management sees the aggregates.",
-        "tag": "In development"
+        "live": "Online",
+        "todayReceived": "received today",
+        "inWork": "in work",
+        "overdue": "overdue",
+        "updated": "Updated {t}",
+        "lastSeen": "Last contact: {t}",
+        "sparkHint": "Samples completed per day, last 30 days",
+        "readinessHint": "Equipment readiness",
+        "details": "Details",
+        "placeholder": {
+            "soon": "LIMS is being rolled out at this laboratory.",
+            "unlinked": "LIMS is running but not yet connected to the centre.",
+            "offline": "Connected, but no data has arrived yet."
+        }
     },
     "footer": {
         "org": "Navoi Mining and Metallurgical Combine JSC",
-        "sub": "Unified Laboratory Information Management System"
+        "sub": "Unified Laboratory Information Management System",
+        "note": "Data arrives automatically from the plant LIMS"
     },
     "auth": {
         "title": "Admin panel login",
@@ -60,7 +58,8 @@
             "name": "Name (RU)",
             "status": "Status",
             "url": "Address",
-            "actions": "Actions"
+            "actions": "Actions",
+            "feed": "Connection"
         },
         "form": {
             "createTitle": "New laboratory",
@@ -81,6 +80,207 @@
             "cancel": "Cancel",
             "delete": "Delete",
             "deleteConfirm": "Delete this laboratory?"
-        }
+        },
+        "listHint": "Laboratories, their addresses and connection to the centre",
+        "noKey": "No key",
+        "blocksN": "{n} blocks"
+    },
+    "home": {
+        "eyebrow": "Live monitoring",
+        "h1a": "Combine laboratories —",
+        "h1b": "on one screen",
+        "lead": "Each plant LIMS pushes the summary figures its administrator allowed. Sample codes and results never leave the plant.",
+        "online": "Labs online",
+        "netHint": "Each bar is a laboratory: green — online, amber — connection lost, grey — not connected",
+        "refresh": "Refresh",
+        "refreshed": "Updated: {t}",
+        "trend": "30-day trend",
+        "trendSub": "sum across all laboratories",
+        "compare": "Laboratories",
+        "compareSub": "samples completed in 30 days",
+        "readiness": "Equipment readiness",
+        "readyShort": "ready",
+        "readinessHint": "Share of working, unblocked equipment (labs that share this data)",
+        "waiting": "No data has arrived yet. In the plant LIMS, open Administration → Central portal and enter the connection key.",
+        "labsSub": "{live} running · {total} total",
+        "title": "Combine laboratories",
+        "connectedN": "{n} connected to the portal",
+        "flow": "Workflow — now",
+        "flowSub": "across {n} labs",
+        "flowOpen": "open: {n}"
+    },
+    "kpi": {
+        "todayReceived": "Received today",
+        "todayCompleted": "Completed today",
+        "todayAnalyses": "Analyses today",
+        "inWork": "In work now",
+        "overdue": "Overdue",
+        "overdueShort": "Overdue",
+        "received": "Received",
+        "completed": "Completed",
+        "analyses": "Analyses",
+        "turnaround": "Turnaround (median)",
+        "h": " h",
+        "medianH": "Median, h",
+        "vsYesterday": "vs yesterday",
+        "labsReporting": "from {n} laboratories",
+        "overdueHint": "in work for over 7 days",
+        "turnaroundN": "over {n} samples",
+        "inWorkN": "in work: {n}",
+        "hShort": "h",
+        "prevWas": "Previous period: {n}",
+        "smallBase": "no baseline",
+        "vsPrev30": "vs previous 30 days",
+        "inWorkHint": "samples open now"
+    },
+    "chart": {
+        "noData": "No data yet"
+    },
+    "compare": {
+        "lab": "Lab",
+        "completed": "Done",
+        "median": "Median"
+    },
+    "state": {
+        "online": "Online",
+        "offline": "No connection",
+        "unlinked": "Not connected",
+        "live": "Running",
+        "soon": "Coming soon"
+    },
+    "time": {
+        "never": "never",
+        "justNow": "just now",
+        "minAgo": "{n} min ago",
+        "hourAgo": "{n} h ago"
+    },
+    "flow": {
+        "registered": "Registered",
+        "assigned": "Assigned to group",
+        "analysis": "In analysis",
+        "review": "In review"
+    },
+    "age": {
+        "d1": "up to 1 day",
+        "d3": "1–3 days",
+        "d7": "3–7 days",
+        "over": "over 7 days",
+        "label": "Age"
+    },
+    "lab": {
+        "back": "Back",
+        "lastSeen": "Last contact: {t}",
+        "interval": "every {n} min",
+        "today": "Today",
+        "month": "30 days",
+        "noToday": "Today's data has not arrived yet",
+        "noData": "No data has arrived from this laboratory yet.",
+        "hidden": "Figures are visible to signed-in users only.",
+        "notShared": "The laboratory does not share this data",
+        "equipment": "Equipment",
+        "flow": "Workflow — now",
+        "flowSub": "open: {n} · overdue: {o}",
+        "shift": "Current shift",
+        "noShift": "No shift right now",
+        "requests": "Requests",
+        "worksheets": "Worksheets",
+        "groups": "Group workload (30 days)",
+        "group": "Group",
+        "unassigned": "Unassigned",
+        "customers": "Customer departments (30 days)",
+        "customer": "Department",
+        "noCustomer": "No department",
+        "trendSub": "daily",
+        "shifts": "Shifts",
+        "nowShift": "now: {s}"
+    },
+    "eq": {
+        "working": "working",
+        "blocked": "blocked",
+        "overdue": "calibration overdue",
+        "dueSoon": "due in 14 days",
+        "name": "Equipment",
+        "calib": "Calibration",
+        "blockedOne": "blocked"
+    },
+    "rq": {
+        "waiting": "waiting",
+        "expired": "expired",
+        "submittedToday": "sent today",
+        "receivedToday": "received today"
+    },
+    "ws": {
+        "open": "open",
+        "awaiting": "awaiting approval",
+        "approved": "approved",
+        "retests": "retests"
+    },
+    "key": {
+        "title": "Connection key",
+        "hint": "The plant LIMS sends data with this key. It is stored encrypted here and shown only once, when created.",
+        "newTitle": "New key — copy it now",
+        "newHint": "Once you leave this page the key will not be shown again.",
+        "copy": "Copy",
+        "copied": "Copied",
+        "step1": "Sign in to the plant LIMS as admin → Administration → Central portal.",
+        "step2": "Centre address: {url}; Connection key: the key above.",
+        "step3": "Tick the blocks to share, switch it on and press Send now.",
+        "current": "Current key",
+        "created": "Created",
+        "lastSeen": "Last received",
+        "interval": "Send interval",
+        "size": "Size",
+        "datasets": "Shared blocks",
+        "issue": "Create key",
+        "rotate": "Replace key",
+        "revoke": "Revoke",
+        "rotateConfirm": "The old key stops working immediately and the plant LIMS will need the new one. Continue?",
+        "revokeConfirm": "Revoke the key? The plant will no longer be able to send data."
+    },
+    "ds": {
+        "summary": "Key figures",
+        "trend": "Trend",
+        "flow": "Workflow",
+        "shifts": "Shift",
+        "equipment": "Equipment",
+        "worksheets": "Worksheets",
+        "requests": "Requests",
+        "groups": "Groups",
+        "customers": "Departments"
+    },
+    "shell": {
+        "app": "NMMC LIMS",
+        "sub": "Central portal",
+        "adminSub": "Control panel",
+        "nav": "Navigation",
+        "overview": "Overview",
+        "site": "Portal",
+        "admin": "Control panel",
+        "adminShort": "Admin",
+        "collapse": "Collapse",
+        "lang": "Language",
+        "login": "Sign in"
+    },
+    "flowHint": {
+        "registered": "received, no group yet",
+        "assigned": "in a group, analysis not started",
+        "analysis": "results being entered",
+        "review": "awaiting approval"
+    },
+    "table": {
+        "lab": "Laboratory",
+        "state": "Status",
+        "todayReceived": "Received today",
+        "todayCompleted": "Completed today",
+        "inWork": "In work",
+        "overdue": "Overdue",
+        "month": "Completed, 30 d",
+        "median": "Median",
+        "equipment": "Equipment",
+        "trend": "30-day trend",
+        "seen": "Last contact",
+        "received": "Received",
+        "completed": "Completed",
+        "analyses": "Analyses"
     }
 }

@@ -1,0 +1,432 @@
+{
+    "v": 1,
+    "generated_at": "2026-11-26T14:11:24+05:00",
+    "timezone": "Asia\/Tashkent",
+    "app": {
+        "name": "LIMS СевРУ",
+        "package": 44
+    },
+    "interval": 5,
+    "datasets": [
+        "summary",
+        "trend",
+        "flow",
+        "shifts",
+        "equipment",
+        "worksheets",
+        "requests",
+        "groups",
+        "customers"
+    ],
+    "summary": {
+        "today": {
+            "received": {
+                "value": 0,
+                "prev": 0,
+                "change": null
+            },
+            "completed": {
+                "value": 0,
+                "prev": 0,
+                "change": null
+            },
+            "analyses": {
+                "value": 0,
+                "prev": 0,
+                "change": null
+            },
+            "turnaround": {
+                "count": 0,
+                "median": null,
+                "avg": null,
+                "p90": null,
+                "prev_median": null,
+                "change": null
+            },
+            "in_work": {
+                "value": 0
+            },
+            "overdue": {
+                "value": 0,
+                "days": 7
+            },
+            "worksheets": {
+                "value": 0,
+                "prev": 0,
+                "change": null,
+                "control": 0
+            }
+        },
+        "month": {
+            "received": {
+                "value": 0,
+                "prev": 0,
+                "change": null
+            },
+            "completed": {
+                "value": 0,
+                "prev": 0,
+                "change": null
+            },
+            "analyses": {
+                "value": 0,
+                "prev": 0,
+                "change": null
+            },
+            "turnaround": {
+                "count": 0,
+                "median": null,
+                "avg": null,
+                "p90": null,
+                "prev_median": null,
+                "change": null
+            },
+            "in_work": {
+                "value": 0
+            },
+            "overdue": {
+                "value": 0,
+                "days": 7
+            },
+            "worksheets": {
+                "value": 0,
+                "prev": 0,
+                "change": null,
+                "control": 0
+            }
+        },
+        "month_from": "2026-10-28",
+        "month_to": "2026-11-26"
+    },
+    "trend": {
+        "bucket": "day",
+        "points": [
+            {
+                "key": "2026-10-28",
+                "received": 0,
+                "completed": 0,
+                "analyses": 0
+            },
+            {
+                "key": "2026-10-29",
+                "received": 0,
+                "completed": 0,
+                "analyses": 0
+            },
+            {
+                "key": "2026-10-30",
+                "received": 0,
+                "completed": 0,
+                "analyses": 0
+            },
+            {
+                "key": "2026-10-31",
+                "received": 0,
+                "completed": 0,
+                "analyses": 0
+            },
+            {
+                "key": "2026-11-01",
+                "received": 0,
+                "completed": 0,
+                "analyses": 0
+            },
+            {
+                "key": "2026-11-02",
+                "received": 0,
+                "completed": 0,
+                "analyses": 0
+            },
+            {
+                "key": "2026-11-03",
+                "received": 0,
+                "completed": 0,
+                "analyses": 0
+            },
+            {
+                "key": "2026-11-04",
+                "received": 0,
+                "completed": 0,
+                "analyses": 0
+            },
+            {
+                "key": "2026-11-05",
+                "received": 0,
+                "completed": 0,
+                "analyses": 0
+            },
+            {
+                "key": "2026-11-06",
+                "received": 0,
+                "completed": 0,
+                "analyses": 0
+            },
+            {
+                "key": "2026-11-07",
+                "received": 0,
+                "completed": 0,
+                "analyses": 0
+            },
+            {
+                "key": "2026-11-08",
+                "received": 0,
+                "completed": 0,
+                "analyses": 0
+            },
+            {
+                "key": "2026-11-09",
+                "received": 0,
+                "completed": 0,
+                "analyses": 0
+            },
+            {
+                "key": "2026-11-10",
+                "received": 0,
+                "completed": 0,
+                "analyses": 0
+            },
+            {
+                "key": "2026-11-11",
+                "received": 0,
+                "completed": 0,
+                "analyses": 0
+            },
+            {
+                "key": "2026-11-12",
+                "received": 0,
+                "completed": 0,
+                "analyses": 0
+            },
+            {
+                "key": "2026-11-13",
+                "received": 0,
+                "completed": 0,
+                "analyses": 0
+            },
+            {
+                "key": "2026-11-14",
+                "received": 0,
+                "completed": 0,
+                "analyses": 0
+            },
+            {
+                "key": "2026-11-15",
+                "received": 0,
+                "completed": 0,
+                "analyses": 0
+            },
+            {
+                "key": "2026-11-16",
+                "received": 0,
+                "completed": 0,
+                "analyses": 0
+            },
+            {
+                "key": "2026-11-17",
+                "received": 0,
+                "completed": 0,
+                "analyses": 0
+            },
+            {
+                "key": "2026-11-18",
+                "received": 0,
+                "completed": 0,
+                "analyses": 0
+            },
+            {
+                "key": "2026-11-19",
+                "received": 0,
+                "completed": 0,
+                "analyses": 0
+            },
+            {
+                "key": "2026-11-20",
+                "received": 0,
+                "completed": 0,
+                "analyses": 0
+            },
+            {
+                "key": "2026-11-21",
+                "received": 0,
+                "completed": 0,
+                "analyses": 0
+            },
+            {
+                "key": "2026-11-22",
+                "received": 0,
+                "completed": 0,
+                "analyses": 0
+            },
+            {
+                "key": "2026-11-23",
+                "received": 0,
+                "completed": 0,
+                "analyses": 0
+            },
+            {
+                "key": "2026-11-24",
+                "received": 0,
+                "completed": 0,
+                "analyses": 0
+            },
+            {
+                "key": "2026-11-25",
+                "received": 0,
+                "completed": 0,
+                "analyses": 0
+            },
+            {
+                "key": "2026-11-26",
+                "received": 0,
+                "completed": 0,
+                "analyses": 0
+            }
+        ]
+    },
+    "flow": {
+        "stages": [
+            {
+                "key": "registered",
+                "count": 0,
+                "aging": {
+                    "d1": 0,
+                    "d3": 0,
+                    "d7": 0,
+                    "over": 0
+                }
+            },
+            {
+                "key": "assigned",
+                "count": 0,
+                "aging": {
+                    "d1": 0,
+                    "d3": 0,
+                    "d7": 0,
+                    "over": 0
+                }
+            },
+            {
+                "key": "analysis",
+                "count": 0,
+                "aging": {
+                    "d1": 0,
+                    "d3": 0,
+                    "d7": 0,
+                    "over": 0
+                }
+            },
+            {
+                "key": "review",
+                "count": 0,
+                "aging": {
+                    "d1": 0,
+                    "d3": 0,
+                    "d7": 0,
+                    "over": 0
+                }
+            }
+        ],
+        "open": 0,
+        "overdue_count": 0
+    },
+    "shifts": {
+        "configured": true,
+        "live": {
+            "id": 1,
+            "name": "1-smena",
+            "start_time": "08:00",
+            "end_time": "20:00",
+            "date": "2026-11-26",
+            "start": "2026-11-26 08:00:00",
+            "end": "2026-11-26 20:00:00",
+            "received": 0,
+            "completed": 0,
+            "analyses": 0,
+            "worksheets": 0
+        },
+        "rows": [
+            {
+                "id": 1,
+                "name": "1-smena",
+                "start_time": "08:00",
+                "end_time": "20:00",
+                "received": 0,
+                "completed": 0,
+                "analyses": 0,
+                "worksheets": 0,
+                "signoffs": 0
+            },
+            {
+                "id": 2,
+                "name": "2-smena",
+                "start_time": "20:00",
+                "end_time": "08:00",
+                "received": 0,
+                "completed": 0,
+                "analyses": 0,
+                "worksheets": 0,
+                "signoffs": 0
+            }
+        ]
+    },
+    "equipment": {
+        "total": 3,
+        "working": 2,
+        "blocked": 1,
+        "waiting": 1,
+        "overdue": 1,
+        "due_soon": 1,
+        "readiness": 67,
+        "items": [
+            {
+                "id": 3,
+                "name": "Mufel pechi (demo)",
+                "serial_number": "SN-DEMO-003",
+                "next_calibration_at": "2026-10-22",
+                "is_blocked": true
+            }
+        ]
+    },
+    "worksheets": {
+        "available": true,
+        "created": {
+            "main": 0,
+            "control": 0
+        },
+        "open": {
+            "draft": 0,
+            "printed": 0,
+            "in_progress": 0,
+            "completed": 0
+        },
+        "approved": 0,
+        "with_warnings": 0,
+        "awaiting": {
+            "count": 0,
+            "old": 0
+        },
+        "extra_parallels": 0,
+        "retests": 0
+    },
+    "groups": {
+        "rows": []
+    },
+    "customers": {
+        "available": true,
+        "rows": [],
+        "other": null
+    },
+    "requests": {
+        "waiting": 0,
+        "expired": 0,
+        "submitted_today": 0,
+        "received_today": 0,
+        "month": {
+            "submitted": 0,
+            "received": 0,
+            "rejected": 0,
+            "cancelled": 0,
+            "schedule": 0
+        }
+    }
+}

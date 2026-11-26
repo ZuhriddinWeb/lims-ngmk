@@ -4,20 +4,9 @@
         "sub": "Laboratoriya axborotini boshqarishning yagona tizimi"
     },
     "nav": {
-        "admin": "Admin panel",
-        "theme": "Mavzuni almashtirish"
-    },
-    "hero": {
-        "eyebrow": "Kombinat laboratoriyalari",
-        "h1a": "Laboratoriya axborot tizimi",
-        "h1b": "«Navoiy KMK» AJ",
-        "lead": "Kombinatning barcha gidrometallurgiya zavodlari va MITLning LIMSiga yagona kirish. Har bir laboratoriya o‘z serverida ishlaydi; bu sahifa ularni bir joyga to‘playdi.",
-        "decree": "O‘zbekiston Respublikasi Prezidentining PQ-276-son qarori ijrosida amalga oshirilmoqda"
-    },
-    "stats": {
-        "total": "Laboratoriya",
-        "live": "Ishga tushgan",
-        "soon": "Joriy etilmoqda"
+        "admin": "Admin",
+        "theme": "Mavzuni almashtirish",
+        "live": "Jonli rejim: ma'lumot avtomatik yangilanadi"
     },
     "sections": {
         "labs": "Laboratoriyalar",
@@ -27,16 +16,25 @@
         "open": "LIMSni ochish",
         "noaddr": "Manzil ko‘rsatilmagan",
         "soon": "Tez orada",
-        "live": "Ishlamoqda"
-    },
-    "future": {
-        "h": "Kombinat rahbariyati uchun yig‘ma tahlil",
-        "p": "LIMS barcha maydonchalarda ishga tushirilgandan so‘ng bu yerda NGMKning barcha laboratoriyalari bo‘yicha konsolidatsiyalangan hisobotlar, dashboardlar va tahlillar paydo bo‘ladi — kirish chegaralangan holda: maydoncha o‘z ma’lumotlarini, rahbariyat yig‘ma ma’lumotlarni ko‘radi.",
-        "tag": "Ishlab chiqilmoqda"
+        "live": "Ishlamoqda",
+        "todayReceived": "bugun qabul",
+        "inWork": "ishda",
+        "overdue": "kechikkan",
+        "updated": "Yangilandi {t}",
+        "lastSeen": "Oxirgi aloqa: {t}",
+        "sparkHint": "30 kunda har kuni yakunlangan namunalar",
+        "readinessHint": "Uskunalar tayyorligi",
+        "details": "Batafsil",
+        "placeholder": {
+            "soon": "LIMS bu laboratoriyada joriy etilmoqda.",
+            "unlinked": "LIMS ishlamoqda, lekin markazga hali ulanmagan.",
+            "offline": "Ulangan, ammo hali ma'lumot kelmagan."
+        }
     },
     "footer": {
         "org": "«Navoiy kon-metallurgiya kombinati» AJ",
-        "sub": "Laboratoriya axborotini boshqarishning yagona tizimi"
+        "sub": "Laboratoriya axborotini boshqarishning yagona tizimi",
+        "note": "Ma'lumotlar zavod LIMS'laridan avtomatik keladi"
     },
     "auth": {
         "title": "Admin panelga kirish",
@@ -60,7 +58,8 @@
             "name": "Nomi (RU)",
             "status": "Status",
             "url": "Manzil",
-            "actions": "Amallar"
+            "actions": "Amallar",
+            "feed": "Markazga ulanish"
         },
         "form": {
             "createTitle": "Yangi laboratoriya",
@@ -81,6 +80,207 @@
             "cancel": "Bekor qilish",
             "delete": "O‘chirish",
             "deleteConfirm": "Ushbu laboratoriya o‘chirilsinmi?"
-        }
+        },
+        "listHint": "Laboratoriyalar, ularning manzili va markazga ulanishi",
+        "noKey": "Kalit yo'q",
+        "blocksN": "{n} blok"
+    },
+    "home": {
+        "eyebrow": "Jonli monitoring",
+        "h1a": "Kombinat laboratoriyalari —",
+        "h1b": "bir ekranda",
+        "lead": "Har bir zavod LIMS'i admin ruxsat bergan jamlangan ko'rsatkichlarni shu yerga o'zi yuboradi. Namuna shifrlari va natijalar zavoddan chiqmaydi.",
+        "online": "Onlayn laboratoriyalar",
+        "netHint": "Har bir ustun — bitta laboratoriya: yashil — onlayn, sariq — aloqa uzilgan, kulrang — ulanmagan",
+        "refresh": "Yangilash",
+        "refreshed": "Yangilandi: {t}",
+        "trend": "30 kunlik dinamika",
+        "trendSub": "barcha laboratoriyalar yig'indisi",
+        "compare": "Laboratoriyalar",
+        "compareSub": "30 kunda yakunlangan namunalar",
+        "readiness": "Uskunalar tayyorligi",
+        "readyShort": "tayyor",
+        "readinessHint": "Ishlayotgan va bloklanmagan uskunalar ulushi (ma'lumot ulashgan laboratoriyalar bo'yicha)",
+        "waiting": "Hali birorta laboratoriyadan ma'lumot kelmagan. Zavod LIMS'ida «Administratsiya → Markaziy portal» bo'limida ulanish kalitini kiriting.",
+        "labsSub": "{live} tasi ishlamoqda · jami {total}",
+        "title": "Kombinat laboratoriyalari",
+        "connectedN": "{n} tasi markazga ulangan",
+        "flow": "Ish oqimi — hozir",
+        "flowSub": "{n} ta laboratoriya bo'yicha",
+        "flowOpen": "ochiq: {n}"
+    },
+    "kpi": {
+        "todayReceived": "Bugun qabul qilindi",
+        "todayCompleted": "Bugun yakunlandi",
+        "todayAnalyses": "Bugun tahlillar",
+        "inWork": "Hozir ishda",
+        "overdue": "Kechikkan",
+        "overdueShort": "Kechikkan",
+        "received": "Qabul qilindi",
+        "completed": "Yakunlandi",
+        "analyses": "Tahlillar",
+        "turnaround": "Bajarilish vaqti (mediana)",
+        "h": " soat",
+        "medianH": "Mediana, soat",
+        "vsYesterday": "kechaga nisbatan",
+        "labsReporting": "{n} ta laboratoriya ma'lumoti",
+        "overdueHint": "7 kundan ortiq ishda",
+        "turnaroundN": "{n} ta namuna bo'yicha",
+        "inWorkN": "ishda: {n}",
+        "hShort": "soat",
+        "prevWas": "O'tgan davrda: {n}",
+        "smallBase": "solishtirib bo'lmaydi",
+        "vsPrev30": "oldingi 30 kunga nisbatan",
+        "inWorkHint": "hozir ochiq namunalar"
+    },
+    "chart": {
+        "noData": "Ma'lumot hali yo'q"
+    },
+    "compare": {
+        "lab": "Lab.",
+        "completed": "Yakunl.",
+        "median": "Mediana"
+    },
+    "state": {
+        "online": "Onlayn",
+        "offline": "Aloqa yo'q",
+        "unlinked": "Ulanmagan",
+        "live": "Ishlamoqda",
+        "soon": "Tez orada"
+    },
+    "time": {
+        "never": "hech qachon",
+        "justNow": "hozirgina",
+        "minAgo": "{n} daq. oldin",
+        "hourAgo": "{n} soat oldin"
+    },
+    "flow": {
+        "registered": "Ro'yxatga olingan",
+        "assigned": "Guruhga uzatilgan",
+        "analysis": "Tahlilda",
+        "review": "Tekshiruvda"
+    },
+    "age": {
+        "d1": "1 kungacha",
+        "d3": "1–3 kun",
+        "d7": "3–7 kun",
+        "over": "7 kundan ko'p",
+        "label": "Yoshi"
+    },
+    "lab": {
+        "back": "Orqaga",
+        "lastSeen": "Oxirgi aloqa: {t}",
+        "interval": "har {n} daqiqada",
+        "today": "Bugun",
+        "month": "30 kun",
+        "noToday": "Bugungi ma'lumot hali kelmagan",
+        "noData": "Bu laboratoriyadan hali ma'lumot kelmagan.",
+        "hidden": "Ko'rsatkichlar faqat tizimga kirgan foydalanuvchilarga ko'rinadi.",
+        "notShared": "Laboratoriya bu ma'lumotni ulashmagan",
+        "equipment": "Uskunalar",
+        "flow": "Ish oqimi — hozir",
+        "flowSub": "ochiq: {n} · kechikkan: {o}",
+        "shift": "Joriy smena",
+        "noShift": "Hozir smena yo'q",
+        "requests": "Buyurtmalar",
+        "worksheets": "Ishchi varaqlar",
+        "groups": "Guruhlar yuklamasi (30 kun)",
+        "group": "Guruh",
+        "unassigned": "Guruhsiz",
+        "customers": "Buyurtmachi bo'limlar (30 kun)",
+        "customer": "Bo'lim",
+        "noCustomer": "Bo'limsiz",
+        "trendSub": "kunlik",
+        "shifts": "Smenalar",
+        "nowShift": "hozir: {s}"
+    },
+    "eq": {
+        "working": "ishlayapti",
+        "blocked": "bloklangan",
+        "overdue": "kalibrovka o'tgan",
+        "dueSoon": "14 kunda muddat",
+        "name": "Uskuna",
+        "calib": "Kalibrovka",
+        "blockedOne": "bloklangan"
+    },
+    "rq": {
+        "waiting": "kutilmoqda",
+        "expired": "muddati o'tgan",
+        "submittedToday": "bugun yuborilgan",
+        "receivedToday": "bugun qabul"
+    },
+    "ws": {
+        "open": "ochiq",
+        "awaiting": "tasdiq kutmoqda",
+        "approved": "tasdiqlangan",
+        "retests": "takroriy"
+    },
+    "key": {
+        "title": "Ulanish kaliti",
+        "hint": "Zavod LIMS'i shu kalit bilan ma'lumot yuboradi. Kalit bu yerda shifrlangan holda saqlanadi va faqat yaratilganda bir marta ko'rsatiladi.",
+        "newTitle": "Yangi kalit — hozir nusxalang",
+        "newHint": "Sahifadan chiqqach kalit boshqa ko'rsatilmaydi.",
+        "copy": "Nusxalash",
+        "copied": "Nusxalandi",
+        "step1": "Zavod LIMS'iga admin sifatida kiring → Administratsiya → «Markaziy portal».",
+        "step2": "«Markaz manzili»: {url}, «Ulanish kaliti»: yuqoridagi kalit.",
+        "step3": "Yuboriladigan bloklarni belgilang, yoqing va «Hozir yuborish» ni bosing.",
+        "current": "Joriy kalit",
+        "created": "Yaratilgan",
+        "lastSeen": "Oxirgi qabul",
+        "interval": "Yuborish oralig'i",
+        "size": "Hajm",
+        "datasets": "Ulashilgan bloklar",
+        "issue": "Kalit yaratish",
+        "rotate": "Kalitni almashtirish",
+        "revoke": "Bekor qilish",
+        "rotateConfirm": "Eski kalit darhol ishlamay qoladi. Zavod LIMS'iga yangisini kiritish kerak bo'ladi. Davom etilsinmi?",
+        "revokeConfirm": "Kalit bekor qilinsinmi? Zavod endi ma'lumot yubora olmaydi."
+    },
+    "ds": {
+        "summary": "Asosiy ko'rsatkichlar",
+        "trend": "Dinamika",
+        "flow": "Ish oqimi",
+        "shifts": "Smena",
+        "equipment": "Uskunalar",
+        "worksheets": "Ishchi varaqlar",
+        "requests": "Buyurtmalar",
+        "groups": "Guruhlar",
+        "customers": "Bo'limlar"
+    },
+    "shell": {
+        "app": "NKMK LIMS",
+        "sub": "Markaziy portal",
+        "adminSub": "Boshqaruv paneli",
+        "nav": "Navigatsiya",
+        "overview": "Umumiy ko'rinish",
+        "site": "Portal",
+        "admin": "Boshqaruv paneli",
+        "adminShort": "Boshqaruv",
+        "collapse": "Yig'ish",
+        "lang": "Til",
+        "login": "Kirish"
+    },
+    "flowHint": {
+        "registered": "qabul qilingan, guruhga berilmagan",
+        "assigned": "guruhda, tahlil boshlanmagan",
+        "analysis": "natija kiritilmoqda",
+        "review": "tasdiq kutmoqda"
+    },
+    "table": {
+        "lab": "Laboratoriya",
+        "state": "Holat",
+        "todayReceived": "Bugun qabul",
+        "todayCompleted": "Bugun yakunl.",
+        "inWork": "Ishda",
+        "overdue": "Kechikkan",
+        "month": "30 kun yakunl.",
+        "median": "Mediana",
+        "equipment": "Uskunalar",
+        "trend": "30 kunlik dinamika",
+        "seen": "Oxirgi aloqa",
+        "received": "Qabul",
+        "completed": "Yakunl.",
+        "analyses": "Tahlil"
     }
 }

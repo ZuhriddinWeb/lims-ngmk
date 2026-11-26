@@ -5,15 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Единая система управления лабораторной информацией АО «Навоийский горно-металлургический комбинат»">
     <link rel="icon" type="image/png" href="/images/ngmk.png">
+    {{-- Shrift — zavod LIMS'idagi kabi (internet bo'lmasa tizim shrifti ishlatiladi) --}}
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 
     {{-- Устанавливаем тему до первой отрисовки, чтобы не было «моргания». --}}
     <script>
         (function () {
             try {
-                var t = localStorage.getItem('lims_theme') || 'dark';
+                var t = localStorage.getItem('lims_theme') || 'light';
                 document.documentElement.setAttribute('data-theme', t);
             } catch (e) {
-                document.documentElement.setAttribute('data-theme', 'dark');
+                document.documentElement.setAttribute('data-theme', 'light');
             }
         })();
     </script>

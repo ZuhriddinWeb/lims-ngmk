@@ -19,8 +19,8 @@ const { t } = useI18n();
 </script>
 
 <template>
-    <div class="card-box" style="max-width: 720px;">
-        <h1 style="margin:0 0 4px; font-size:20px; font-weight:900;">
+    <div class="card-box">
+        <h1 style="margin:0 0 4px; font-size:18px; font-weight:600;">
             {{ mode === 'edit' ? t('admin.form.editTitle') : t('admin.form.createTitle') }}
         </h1>
         <div class="sub" style="margin-bottom:20px;">{{ t('admin.subtitle') }}</div>
@@ -74,7 +74,7 @@ const { t } = useI18n();
                     <label>{{ t('admin.form.url') }}</label>
                     <input v-model="form.url" type="text" class="input" placeholder="http://192.168.x.x:3010" />
                     <div v-if="form.errors.url" class="err">{{ form.errors.url }}</div>
-                    <div class="sub" style="margin-top:5px;">{{ t('admin.form.urlHint') }}</div>
+                    <div class="hint">{{ t('admin.form.urlHint') }}</div>
                 </div>
             </div>
 

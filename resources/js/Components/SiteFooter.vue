@@ -7,11 +7,7 @@ const year = new Date().getFullYear();
 
 <template>
     <footer class="site">
-        <div><strong>{{ t('footer.org') }}</strong></div>
-        <div>
-            <span>{{ t('footer.sub') }}</span>
-            <span class="sep">•</span> {{ year }}
-            <span class="sep">•</span> v1.0
-        </div>
+        <div><strong>{{ t('footer.org') }}</strong><span class="sep">•</span>{{ t('footer.sub') }}</div>
+        <div>{{ t('footer.note') }}<span class="sep">•</span>{{ year }}<span class="sep">•</span>v2.0</div>
     </footer>
 </template>

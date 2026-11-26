@@ -1,12 +1,13 @@
 <script setup>
-import TopBar from '@/Components/TopBar.vue';
-import SiteFooter from '@/Components/SiteFooter.vue';
+import AppShell from '@/Layouts/AppShell.vue';
+
+defineProps({
+    crumbs: { type: Array, default: () => [] },
+    activeLab: { type: Number, default: null },
+    live: { type: Boolean, default: false },
+});
 </script>
 
 <template>
-    <TopBar />
-    <main class="wrap">
-        <slot />
-        <SiteFooter />
-    </main>
+    <AppShell mode="public" :crumbs="crumbs" :active-lab="activeLab" :live="live"><slot /></AppShell>
 </template>

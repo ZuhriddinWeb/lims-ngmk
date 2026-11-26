@@ -5,7 +5,7 @@ function initialTheme() {
         const attr = document.documentElement.getAttribute('data-theme');
         if (attr) return attr;
     }
-    return 'dark';
+    return 'light';
 }
 
 const theme = ref(initialTheme());

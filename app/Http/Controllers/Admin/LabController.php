@@ -18,13 +18,17 @@ class LabController extends Controller
     public function index(): Response
     {
         return Inertia::render('Admin/Labs/Index', [
-            'labs' => Lab::ordered()->get()->map(fn (Lab $lab) => [
+            'labs' => Lab::ordered()->with('snapshot')->get()->map(fn (Lab $lab) => [
                 'id' => $lab->id,
                 'code' => $lab->code,
                 'name_ru' => $lab->name_ru,
                 'status' => $lab->status,
                 'url' => $lab->url,
                 'sort_order' => $lab->sort_order,
+                'connected' => $lab->hasKey(),
+                'online' => \App\Support\LabFeed::online($lab, $lab->snapshot?->payload ?? []),
+                'last_seen' => $lab->last_seen_at?->toIso8601String(),
+                'datasets' => $lab->snapshot?->payload['datasets'] ?? [],
             ]),
         ]);
     }
@@ -58,7 +62,39 @@ class LabController extends Controller
                 'url' => $lab->url,
                 'sort_order' => $lab->sort_order,
             ],
+            'feed' => [
+                'connected' => $lab->hasKey(),
+                'key_hint' => $lab->keyHint(),
+                'key_created_at' => $lab->key_created_at?->toIso8601String(),
+                'last_seen' => $lab->last_seen_at?->toIso8601String(),
+                'last_ip' => $lab->last_ip,
+                'online' => \App\Support\LabFeed::online($lab, $lab->snapshot?->payload ?? []),
+                'datasets' => $lab->snapshot?->payload['datasets'] ?? [],
+                'bytes' => $lab->snapshot?->bytes,
+                'interval' => $lab->snapshot?->payload['interval'] ?? null,
+                'ingest_url' => url('/'),
+            ],
+            // yangi kalit faqat yaratilgan zahoti bir marta ko'rsatiladi
+            'newKey' => session('new_key'),
         ]);
+    }
+
+    /** Ulanish kalitini yaratish yoki almashtirish (eski kalit darhol ishlamay qoladi) */
+    public function issueKey(Lab $lab): RedirectResponse
+    {
+        $key = $lab->issueKey();
+
+        return redirect()->route('admin.labs.edit', $lab)
+            ->with('new_key', $key)
+            ->with('success', 'Ulanish kaliti yaratildi — uni hozir nusxalab, zavod LIMS\'iga kiriting.');
+    }
+
+    /** Kalitni bekor qilish — zavod endi ma'lumot yubora olmaydi */
+    public function revokeKey(Lab $lab): RedirectResponse
+    {
+        $lab->revokeKey();
+
+        return redirect()->route('admin.labs.edit', $lab)->with('success', 'Ulanish kaliti bekor qilindi.');
     }
 
     public function update(Request $request, Lab $lab): RedirectResponse
@@ -72,6 +108,7 @@ class LabController extends Controller
 
     public function destroy(Lab $lab): RedirectResponse
     {
+        $lab->snapshot()->delete();
         $lab->delete();
 
         return redirect()

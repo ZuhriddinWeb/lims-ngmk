@@ -33,7 +33,7 @@ function submit() {
         <title>{{ t('admin.form.createTitle') }}</title>
     </Head>
 
-    <AdminLayout>
+    <AdminLayout :crumbs="[{ label: t('shell.adminShort'), href: '/admin/labs' }, { label: t('admin.title'), href: '/admin/labs' }, { label: t('admin.form.createTitle') }]">
         <LabForm :form="form" mode="create" @submit="submit" />
     </AdminLayout>
 </template>

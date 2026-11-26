@@ -17,6 +17,9 @@ return Application::configure(basePath: dirname(__DIR__))
         ]);
 
         $middleware->redirectGuestsTo(fn () => route('login'));
+
+        // Zavod serverlari imzo bilan yuboradi — sessiya/CSRF yo'q
+        $middleware->validateCsrfTokens(except: ['api/ingest']);
     })
     ->withExceptions(function (Exceptions $exceptions) {
         //
